@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Covey's Quadrants";
+}
+
+@*twelve columns in bootstrap grid*@
+
+<div class="container">
+
+    @*row 1 - Title of Matrix*@
+    <div class=row>
+
+        <div class="col-lg-12 col-xs-6 border border-width:8px border-dark">
+            <h1 style="text-align:center">Stephen Covey's Time Management Matrix</h1>
+        </div>
+
+    </div>
+
+    @*row 2 - Empty Block / Urgent / Not Urgent*@
+    <div class="row">
+
+        <div class="col-lg-2 col-xs-6 border border-width:8px border-dark"></div>
+
+        <div class="col-lg-5 col-xs-6 border border-width:8px border-dark">
+            <h3 style="text-align:center">Urgent</h3>
+        </div>
+
+        <div class="col-lg-5 col-xs-6 border border-width:8px border-dark">
+            <h3 style="text-align:center">Not Urgent</h3>
+        </div>
+
+    </div>
+
+    @*row 3 - Important / Quad 1 / Quad 2 *@
+    @*for each*@
+    @foreach (var x in Model)
+    {
+        <div class="row">
+
+            <div class="col-lg-2 col-xs-6 border border-width:8px border-dark">
+                <h3 style="text-align:center">Important</h3>
+            </div>
+
+            <div class="col-lg-5 col-xs-6 border border-width:8px border-dark">
+
+                <h5 style="text-align:center">Quadrant 1</h5>
+
+                @*row 3-1*@
+                <div class="row">
+
+                    <div class="col-7">
+                        <ul>
+                            @*if statement*@
+                            <li>
+                                if (@x.Quadrant == 1)
+                                {<div class="col-6">@x.Task</div> } <br />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2" style="align-content:center">
+                        <a asp-controller="Home" asp-action="Edit">Edit</a>
+                        <a asp-controller="Home" asp-action="Delete">Delete</a>
+                    </div>
+
+                    <div class="col-3" style="align-content:center">
+                        <a class="btn btn-info" asp-controller="Home" asp-action="Complete">Complete</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 col-xs-6 border border-width:8px border-dark">
+
+                <h5 style="text-align:center">Quadrant 2</h5>
+
+                @*row 3-2*@
+                <div class="row">
+
+                    <div class="col-7">
+                        <ul>
+                            @*if statement*@
+                            <li>
+                                else if (@x.Quadrant == 2)
+                                {<div class="col-6">@x.Task</div> } <br />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2" style="align-content:center">
+                        <a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.taskId">Edit</a>
+                        <a asp-controller="Home" asp-action="Delete" asp-route-movieid="@x.taskId">Delete</a>
+                    </div>
+
+                    <div class="col-3" style="align-content:center">
+                        <a class="btn btn-info" asp-controller="Home" asp-action="Complete" asp-route-movieid="@x.taskId">Complete</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        @*row 4 - Not Important / Quad 3 / Quad 4*@
+
+        <div class="row">
+
+            <div class="col-lg-2 col-xs-6 border border-width:8px border-dark">
+                <h3 style="text-align:center">Not Important</h3>
+            </div>
+
+            <div class="col-lg-5 col-xs-6 border border-width:8px border-dark">
+
+                <h5 style="text-align:center">Quadrant 3</h5>
+
+                @*row 4-1*@
+                <div class="row">
+
+                    <div class="col-7">
+                        <ul>
+                            @*if statement*@
+                            <li>
+                                else if (@x.Quadrant == 3)
+                                {<div class="col-6">@x.Task</div> } <br />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2" style="align-content:center">
+                        <a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.taskId">Edit</a>
+                        <a asp-controller="Home" asp-action="Delete" asp-route-movieid="@x.taskId">Delete</a>
+                    </div>
+
+                    <div class="col-3" style="align-content:center">
+                        <a class="btn btn-info" asp-controller="Home" asp-action="Complete" asp-route-movieid="@x.taskId">Complete</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 col-xs-6 border border-width:8px border-dark">
+
+                <h5 style="text-align:center">Quadrant 4</h5>
+
+                @*row 4-2*@
+                <div class="row">
+
+                    <div class="col-7">
+                        <ul>
+                            @*if statement*@
+                            <li>
+                                else if (@x.Quadrant == 4)
+                                {<div class="col-6">@x.Task</div> } <br />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2" style="align-content:center">
+                        <a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.taskId">Edit</a>
+                        <a asp-controller="Home" asp-action="Delete" asp-route-movieid="@x.taskId">Delete</a>
+                    </div>
+
+                    <div class="col-3" style="align-content:center">
+                        <a class="btn btn-info" asp-controller="Home" asp-action="Complete" asp-route-movieid="@x.taskId">Complete</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+</div>
+        
+
+
