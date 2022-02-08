@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Mission_6.Models;
+using Project_1.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mission_6.Controllers
+namespace Project_1.Controllers
 {
     public class HomeController : Controller
     {
