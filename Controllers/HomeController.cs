@@ -93,7 +93,7 @@ namespace Project_1.Controllers
         [HttpPost]
         public IActionResult DeleteTask(Task t)
         {
-            tContext.Tasks.Remove(t);
+            tContext.Tasks.Remove(t); // WHY IS THIS HAPPENING?
             tContext.SaveChanges();
 
             return RedirectToAction("TaskQuadrants");
