@@ -91,7 +91,7 @@ namespace Project_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteTask(Task t)
+        public IActionResult DeleteTask(TaskModel t)
         {
             tContext.Tasks.Remove(t);
             tContext.SaveChanges();
