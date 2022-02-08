@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Delete Movie";
+}
+
+@model TaskModel
+
+<h2>Confirm Deletion:</h2>
+@*what @Model goes here?*@ 
+<h3>Are you sure you want to delete @Model.Task?</h3>
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <a asp-controller="Home" asp-action="TaskQuadrants" class="btn btn-primary">Cancel</a>
+
+    <input type="hidden" asp-for="taskId" />
+</form>
