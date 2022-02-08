@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Project_1.Models;
 
-namespace Mission_6.Models
+namespace Project_1.Models
 {
     public class TaskModel
     {

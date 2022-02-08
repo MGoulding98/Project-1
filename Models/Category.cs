@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MovieCollection.Models
+namespace Project_1.Models
 {
     public class Category
     {

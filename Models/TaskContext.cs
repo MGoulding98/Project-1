@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Project_1.Models;
 
 namespace Project_1.Models
 {
-    public class MovieContext : DbContext
+    public class TaskContext : DbContext
     {
-        public MovieContext(DbContextOptions<TaskContext> options) : base(options)
+        public TaskContext(DbContextOptions<TaskContext> options) : base(options)
         {
             // leave blank for now
         }
