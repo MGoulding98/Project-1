@@ -26,7 +26,7 @@ namespace Project_1.Controllers
         }
 
         // QUADRANTS PAGE
-        public IActionResult TaskQuadrants(TaskModel tm)
+        public IActionResult TaskQuadrants()
         {
             var tasks = tContext.Tasks
                 .Include(x => x.Category)
@@ -45,7 +45,7 @@ namespace Project_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult TaskForm(Task t)
+        public IActionResult TaskForm(TaskModel t)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +73,7 @@ namespace Project_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditTask(Task t)
+        public IActionResult EditTask(TaskModel t)
         {
             tContext.Update(t);
             tContext.SaveChanges();
@@ -91,7 +91,7 @@ namespace Project_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteTask(Task t)
+        public IActionResult DeleteTask(TaskModel t)
         {
             tContext.Tasks.Remove(t); // WHY IS THIS HAPPENING?
             tContext.SaveChanges();
