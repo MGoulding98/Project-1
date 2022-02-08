@@ -30,7 +30,7 @@ namespace Project_1
 
             services.AddDbContext<TaskContext>(options =>
             {
-                options.UseSqlite(Configuration["ConnectionStrings:BlahConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:TaskConnection"]);
             });
         }
 
