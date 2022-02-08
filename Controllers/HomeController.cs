@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Project_1.Models;
 using System;
@@ -25,7 +26,7 @@ namespace Project_1.Controllers
         }
 
         // QUADRANTS PAGE
-        public IActionResult TaskQuadrants()
+        public IActionResult TaskQuadrants(TaskModel tm)
         {
             var tasks = tContext.Tasks
                 .Include(x => x.Category)
