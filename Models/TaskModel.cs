@@ -10,13 +10,15 @@ namespace Project_1.Models
         [Required]
         public int TaskId { get; set; }
 
+        [Required]
+        public string Task { get; set; }
+
         public DateTime DueDate { get; set; }
 
         [Required]
         public int Quadrant { get; set; }
 
         // set up foreign key relationship
-        [Required]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 
