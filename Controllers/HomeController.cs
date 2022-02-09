@@ -26,7 +26,6 @@ namespace Project_1.Controllers
         }
 
         // QUADRANTS PAGE
-        // Does there need to be an [HttpGet] here?
         public IActionResult TaskQuadrants()
         {
             var tasks = tContext.Tasks
