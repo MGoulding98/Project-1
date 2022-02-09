@@ -11,8 +11,12 @@
     <input type="text" asp-for="Task" /><br />
     <label asp-for="DueDate">Task:</label>
     <input type="datetime" asp-for="DueDate" /><br />
-    <label asp-for="Quadrant">Task:</label>
-    <input type="text" asp-for="Quadrant" /><br />
+    <select asp-for="Quadrant">
+        <option value="1">Quadrant I: Important / Urgent</option>
+        <option value="2">Quadrant II: Important / Not Urgent</option>
+        <option value="3">Quadrant III: Not Important / Urgent</option>
+        <option value="4">Quadrant IV: Not Important / Not Urgent</option>
+    </select><br />
     <select asp-for="CategoryId">
         <option value="">Select a Category</option>
         @foreach (Category c in ViewBag.Categories)
