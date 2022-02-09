@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Covey's Quadrants";
 }
+
 @model List<TaskModel>
+
 @*twelve columns in bootstrap grid*@
 
 <div class="container">
@@ -53,16 +55,14 @@
                                 {
                                     @if (@x.Quadrant == 1 && @x.Completed == false)
                                     {<div class="col-6">@x.Task</div>} <br />
+
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
                                 }
-                                </li>
+                            </li>
                         </ul>
                     </div>
-
-                    <div class="col-3" style="align-content:center">
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
-                    </div>
-
+                                
                 </div>
 
             </div>
@@ -82,14 +82,12 @@
                                 {
                                     @if (@x.Quadrant == 2 && @x.Completed == false)
                                     {<div class="col-6">@x.Task</div>} <br />
+
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
                                 }
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="col-3" style="align-content:center">
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
                     </div>
 
                 </div>
@@ -121,14 +119,12 @@
                                 {
                                     @if (@x.Quadrant == 3 && @x.Completed == false)
                                     {<div class="col-6">@x.Task</div>} <br />
+
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
                                 }
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="col-3" style="align-content:center">
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
                     </div>
 
                 </div>
@@ -150,14 +146,12 @@
                                 {
                                     @if (@x.Quadrant == 4 && @x.Completed == false)
                                     {<div class="col-6">@x.Task</div>} <br />
+
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
+                                    <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
                                 }
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="col-3" style="align-content:center">
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a>
-                        <a class="btn btn-info" asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a>
                     </div>
 
                 </div>
