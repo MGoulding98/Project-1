@@ -9,9 +9,10 @@
 
     <label asp-for="Task">Task:</label>
     <input type="text" asp-for="Task" /><br />
-    <label asp-for="DueDate">Task:</label>
+    <label asp-for="DueDate">Due Date:</label>
     <input type="datetime" asp-for="DueDate" /><br />
     <select asp-for="Quadrant">
+        <option value="">Choose a Quadrant</option>
         <option value="1">Quadrant I: Important / Urgent</option>
         <option value="2">Quadrant II: Important / Not Urgent</option>
         <option value="3">Quadrant III: Not Important / Urgent</option>
@@ -25,6 +26,7 @@
         }
     </select>
     <br />
+    <label asp-for="Completed">Completed:</label>
     <select asp-for="Completed">
         <option value="true">Yes</option>
         <option value="false">No</option>
