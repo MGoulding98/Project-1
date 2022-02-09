@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Project_1.Models;
 using System;
@@ -44,7 +45,7 @@ namespace Project_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult TaskForm(Task t)
+        public IActionResult TaskForm(TaskModel t)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +73,7 @@ namespace Project_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditTask(Task t)
+        public IActionResult EditTask(TaskModel t)
         {
             tContext.Update(t);
             tContext.SaveChanges();
@@ -90,9 +91,9 @@ namespace Project_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteTask(Task t)
+        public IActionResult DeleteTask(TaskModel t)
         {
-            tContext.Tasks.Remove(t);
+            tContext.Tasks.Remove(t); // WHY IS THIS HAPPENING?
             tContext.SaveChanges();
 
             return RedirectToAction("TaskQuadrants");
