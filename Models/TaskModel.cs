@@ -13,7 +13,7 @@ namespace Project_1.Models
         [Required]
         public string Task { get; set; }
 
-        public DateTime DueDate { get; set; }
+        public string DueDate { get; set; }
 
         [Required]
         public int Quadrant { get; set; }
